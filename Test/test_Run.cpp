@@ -16,7 +16,7 @@ bool AppTest::OnInit() {
 
 int AppTest::OnRun() {
     ::testing::InitGoogleTest();
-    RUN_ALL_TESTS();
+    return RUN_ALL_TESTS();
 }
 
 wxIMPLEMENT_APP(AppTest);
