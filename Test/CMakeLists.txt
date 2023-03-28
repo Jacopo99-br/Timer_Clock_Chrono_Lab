@@ -1,1 +1,8 @@
-
+cmake_minimum_required(VERSION 3.23)
+find_package(GTest REQUIRED)
+include_directories(${GTEST_INCLUDE_DIRS})
+find_package(wxWidgets REQUIRED COMPONENTS net core base)
+include(${wxWidgets_USE_FILE})
+set(SOURCE_FILES test_Run.cpp Chrono_test.cpp)
+add_executable(test_Run ${SOURCE_FILES})
+target_link_libraries(test_Run ${GTEST_BOTH_LIBRARIES} ${wxWidgets_LIBRARIES} core)
