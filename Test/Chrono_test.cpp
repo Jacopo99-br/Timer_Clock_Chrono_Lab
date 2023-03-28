@@ -5,8 +5,6 @@
 #include "../headers_/MainFrame.h"
 #include "../headers_/Chrono.h"
 #include <gtest/gtest.h>
-
-
 class ChronoTest:public::testing::Test{
 protected:
     virtual void SetUp();
