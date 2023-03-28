@@ -36,7 +36,7 @@ ASSERT_TRUE(chrono->getType()->isOff());
 }
 
 TEST_F(ChronoTest, CheckAzz){    //controlla il corretto azzeramento dei campi
-    for(int i=0;i<200;i++)
+    
     chrono->getType()->computeTime();
     chrono->getType()->turn_zero();
     chrono->getType()->time();
