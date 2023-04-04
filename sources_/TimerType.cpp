@@ -111,9 +111,18 @@ void TimerType::start() {
     timerN->Start(interval);
     state=true;
 }
-
+void TimerType::timerN_start(int milliseconds){
+    timerN->Start(milliseconds);
+}
 void TimerType::stop() {
     timerN->Stop();
     state=false;
+}
+void TimerType::reset() {
+    state=false;
+    this->stop();
+    this->setSleft(0);
+    this->setMleft(0);
+    this->setHleft(0);
 }
 
